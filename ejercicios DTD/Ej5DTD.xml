@@ -1,0 +1,35 @@
+<!--Design and implementation:
+        - Write a valid XML file with at least two entries with an internal DTD. Save it as ex5.xml.-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE NEWSPAPER [
+<!ELEMENT NEWSPAPER (ARTICLE+)>
+<!ELEMENT ARTICLE (HEADLINE,BYLINE,BODY,NOTES)>
+<!ELEMENT HEADLINE (#PCDATA)>
+<!ELEMENT BYLINE (#PCDATA)>
+<!ELEMENT BODY (#PCDATA)>
+<!ELEMENT NOTES (#PCDATA)>
+
+<!ATTLIST ARTICLE AUTHOR CDATA #REQUIRED>
+<!ATTLIST ARTICLE DATE CDATA #IMPLIED>
+
+<!ENTITY NEWSPAPER "Vervet Logic Times">
+<!ENTITY PUBLISHER "Vervet Logic Press">
+<!ENTITY COPYRIGHT "Copyright 1998 Vervet Logic Press">
+]>
+
+<NEWSPAPER>
+<ARTICLE AUTHOR="Tesla">
+<HEADLINE>Coche</HEADLINE>
+<BYLINE>texto ejemplo</BYLINE>
+<BODY>Texto ejemplo</BODY>
+<NOTES>No hay notas</NOTES>
+</ARTICLE>
+
+<ARTICLE AUTHOR="Miguel">
+<HEADLINE>Tortilla de Patatas</HEADLINE>
+<BYLINE>está muy rica</BYLINE>
+<BODY>No puedo parar de comer</BODY>
+<NOTES>mi abuela cocina muy bien</NOTES>
+</ARTICLE>
+</NEWSPAPER>
